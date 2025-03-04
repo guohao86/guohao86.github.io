@@ -260,9 +260,9 @@
     
     <!-- Save Contact Button -->
     <div style="padding: 16px; display: flex; gap: 8px;">
-      <button class="save-button">
-        Save contact
-      </button>
+        <a href="#" id="save-contact-button" class="save-button" download="stephen_sing.vcf">
+            Save contact
+          </a>
       <button class="qr-button">
         <i class="fas fa-qrcode"></i>
       </button>
@@ -275,6 +275,23 @@
       // The data is now hardcoded in the HTML, but you can use this script to load from data.json
       // Uncomment this section and remove the hardcoded values to load dynamically
       
+        // Create vCard content
+      const vCardData = `BEGIN:VCARD
+        VERSION:3.0
+        FN:Gary Guo
+        TITLE:Software Quality Engineer
+        ORG:NCS Pte Ltd
+        TEL;TYPE=CELL:+658123456
+        EMAIL:gary_biz@outlook.com
+        URL:http://www.sra.org.sg
+        ADR;TYPE=WORK:;;1 Coleman St, 05-11B;Singapore;;179803;
+        NOTE:Singapore Retailers Association, Executive in Residence
+        X-SOCIALPROFILE;TYPE=linkedin:garyguo
+        X-SOCIALPROFILE;TYPE=facebook:garygary86
+        X-SOCIALPROFILE;TYPE=whatsapp:+658123456
+        X-SOCIALPROFILE;TYPE=wechat:garygarygary
+        END:VCARD`;
+
       fetch('data.json')
         .then(response => response.json())
         .then(data => {
@@ -297,7 +314,33 @@
         .catch(error => {
           console.error('Error loading data:', error);
         });
+
+        // Create a data URL from the vCard
+      const vCardBlob = new Blob([vCardData], { type: 'text/vcard' });
+      const vCardURL = URL.createObjectURL(vCardBlob);
       
+      // Set the download link
+      const saveButton = document.getElementById('save-contact-button');
+      saveButton.href = vCardURL;
+      
+    // Optional: Share functionality for the share button
+    const shareButton = document.getElementById('share-button');
+      shareButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Check if the Web Share API is available
+        if (navigator.share) {
+          navigator.share({
+            title: 'Contact: Gary Guo',
+            text: 'Contact details for Gary Guo, Software Quality Engineer at NCS Pte Ltd',
+            url: window.location.href
+          })
+          .catch(error => console.log('Sharing failed', error));
+        } else {
+          // Fallback for browsers that don't support the Web Share API
+          alert('Share this page: ' + window.location.href);
+        }
+      });
       
       // Set default links
     //   document.getElementById('email-link').href = 'mailto:stephen.sing@sra.org.sg';
