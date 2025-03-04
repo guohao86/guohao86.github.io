@@ -1,0 +1,39 @@
+{
+    "name": "Gary Guo",
+    "title": "Executive",
+    "email": "gary_biz@outlook.com",
+    "phone": "96857236",
+    "location": "1 Coleman St, Singapore 179803 05-11B",
+    "countryPhone": "+65",
+    "website": "www.sra.org.sg",
+    "experience": [
+      "NCS Pte Ltd"
+    ],
+    "academic": [
+      "Computer Engineering",
+      "Nanyang Technological University",
+      "2007 - 2011"
+    ],
+    "socials": [
+      {
+        "platform": "linkedin",
+        "username": "xysing"
+      },
+      {
+        "platform": "whatsapp",
+        "username": "+6596857236"
+      },
+      {
+        "platform": "wechat",
+        "username": "bingbingbiangbiang"
+      },
+      {
+        "platform": "facebook",
+        "username": "stephensing"
+      }
+    ],
+    "links": [
+      "SRA Retail Brigade",
+      "APARA"
+    ]
+  }

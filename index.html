@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Profile</title>
+  <!-- Import Tailwind CSS from CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .profile-container {
+      max-width: 480px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+    .contact-button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .divider {
+      height: 1px;
+      background-color: #e5e7eb;
+      margin: 4px 0;
+    }
+    .item-icon {
+      width: 40px;
+      text-align: center;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 0;
+    }
+    .save-button {
+      background-color: #1f2937;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 8px;
+      flex-grow: 1;
+      text-align: center;
+      font-weight: 500;
+    }
+    .qr-button {
+      background-color: #e5e7eb;
+      color: #4b5563;
+      padding: 16px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-container {
+      border-top: 1px solid #e5e7eb;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <!-- Profile Header -->
+    <div style="padding: 24px; text-align: center;">
+      <div style="margin-bottom: 16px; position: relative; margin-left: auto; margin-right: auto; width: 120px; height: 120px;">
+        <div>
+          <img id="profile-image" src="profile.webp" alt="Profile" class="profile-image">
+        </div>
+      </div>
+      <h1 id="profile-name" style="font-size: 30px; font-weight: bold; margin-bottom: 4px;">Gary Guo</h1>
+      <div id="profile-title" style="color: #4b5563; margin-bottom: 24px;">Software Quality Engineer</div>
+      
+      <!-- Contact Buttons -->
+      <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 24px;">
+        <a href="#" id="phone-button" class="contact-button">
+          <i class="fas fa-phone" style="color: #374151;"></i>
+        </a>
+        <a href="#" id="email-button" class="contact-button">
+          <i class="fas fa-envelope" style="color: #374151;"></i>
+        </a>
+        <a href="#" id="share-button" class="contact-button">
+          <i class="fas fa-share-alt" style="color: #374151;"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="section-container">
+      <a href="#" id="email-link" class="contact-item">
+        <div class="item-icon">
+          <i class="fas fa-envelope" style="color: #374151;"></i>
+        </div>
+        <div style="margin-left: 12px; color: #1f2937;" id="email-text">gary_biz@outlook.com</div>
+      </a>
+    </div>
+
+    <div class="section-container" style="border-top: 1px solid #e5e7eb;">
+      <a href="#" id="phone-link" class="contact-item">
+        <div class="item-icon">
+          <i class="fas fa-phone" style="color: #374151;"></i>
+        </div>
+        <div style="margin-left: 12px; color: #1f2937;" id="phone-text">+658123456</div>
+      </a>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section-container">
+      <h2 class="section-title">Experience</h2>
+      <div class="divider"></div>
+      
+      <div id="experience-container">
+        <!-- Experience items -->
+        <div class="contact-item">
+          <div class="item-icon">
+            <i class="fas fa-circle" style="color: #374151; font-size: 6px;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">NCS Pte Ltd</div>
+        </div>
+      </div>
+      
+      <!-- Location -->
+      <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+        <div class="item-icon">
+          <i class="fas fa-map-marker-alt" style="color: #374151;"></i>
+        </div>
+        <div style="margin-left: 12px; color: #1f2937;" id="location-text">5 Ang Mo Kio Street 62, NCS Hub, Singapore 569141</div>
+      </div>
+      
+      <!-- Map -->
+      <div style="margin-top: 8px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;" id="map-container">
+        <!-- <img src="/api/placeholder/400/200" alt="Map" style="width: 100%; height: 192px; object-fit: cover;"> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.648147613897!2d103.84160437529862!3d1.3877034614523194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16bdfcdd56cf%3A0xb8089465ca1fb9e!2sNCS%20Group!5e0!3m2!1sen!2ssg!4v1741068826146!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+      <!-- Phone with country code -->
+      <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+        <div class="item-icon">
+          <i class="fas fa-phone" style="color: #374151;"></i>
+        </div>
+        <div style="margin-left: 12px; color: #1f2937;" id="country-phone-text">+65</div>
+      </div>
+      
+      <!-- Website -->
+      <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+        <div class="item-icon">
+          <i class="fas fa-link" style="color: #374151;"></i>
+        </div>
+        <div style="margin-left: 12px; color: #1f2937;" id="website-text">https://www.ncs.co/en-sg/</div>
+      </div>
+    </div>
+    
+    <!-- Academic Section -->
+    <div class="section-container">
+      <h2 class="section-title">Academic</h2>
+      <div class="divider"></div>
+      
+      <div id="academic-container">
+        <!-- Academic items -->
+        <div class="contact-item">
+          <div class="item-icon">
+            <i class="fas fa-circle" style="color: #374151; font-size: 6px;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">Computer Engineering</div>
+        </div>
+        <div class="contact-item">
+          <div class="item-icon">
+            <i class="fas fa-circle" style="color: #374151; font-size: 6px;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">National University of Singapore</div>
+        </div>
+        <div class="contact-item">
+          <div class="item-icon">
+            <i class="fas fa-circle" style="color: #374151; font-size: 6px;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">2007 - 2011</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Socials Section -->
+    <div class="section-container">
+      <h2 class="section-title">Socials</h2>
+      <div class="divider"></div>
+      
+      <div id="socials-container">
+        <!-- Social items -->
+        <div class="contact-item">
+          <div class="item-icon">
+            <i class="fab fa-linkedin" style="color: #374151;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">garyguo</div>
+        </div>
+        <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+          <div class="item-icon">
+            <i class="fab fa-whatsapp" style="color: #374151;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">+658123456</div>
+        </div>
+        <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+          <div class="item-icon">
+            <i class="fab fa-weixin" style="color: #374151;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">guoguoguo</div>
+        </div>
+        <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+          <div class="item-icon">
+            <i class="fab fa-facebook" style="color: #374151;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">garygary86</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Links Section -->
+    <div class="section-container">
+      <h2 class="section-title">Links</h2>
+      <div class="divider"></div>
+      
+      <div id="links-container">
+        <!-- Links items -->
+        <div class="contact-item">
+          <div class="item-icon">
+            <i class="fas fa-link" style="color: #374151;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">SRA Retail Brigade</div>
+        </div>
+        <div class="contact-item" style="border-top: 1px solid #e5e7eb;">
+          <div class="item-icon">
+            <i class="fas fa-link" style="color: #374151;"></i>
+          </div>
+          <div style="margin-left: 12px; color: #1f2937;">APARA</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Save Contact Button -->
+    <div style="padding: 16px; display: flex; gap: 8px;">
+      <button class="save-button">
+        Save contact
+      </button>
+      <button class="qr-button">
+        <i class="fas fa-qrcode"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Data loading functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // The data is now hardcoded in the HTML, but you can use this script to load from data.json
+      // Uncomment this section and remove the hardcoded values to load dynamically
+      
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('profile-name').textContent = data.name;
+          document.getElementById('profile-title').textContent = data.title;
+          document.getElementById('email-text').textContent = data.email;
+          document.getElementById('phone-text').textContent = data.phone;
+          document.getElementById('location-text').textContent = data.location;
+          document.getElementById('country-phone-text').textContent = data.countryPhone;
+          document.getElementById('website-text').textContent = data.website;
+          
+          document.getElementById('email-link').href = 'mailto:' + data.email;
+          document.getElementById('phone-link').href = 'tel:' + data.phone;
+          document.getElementById('phone-button').href = 'tel:' + data.phone;
+          document.getElementById('email-button').href = 'mailto:' + data.email;
+          
+          // Clear and repopulate containers
+          // ...
+        })
+        .catch(error => {
+          console.error('Error loading data:', error);
+        });
+      
+      
+      // Set default links
+    //   document.getElementById('email-link').href = 'mailto:stephen.sing@sra.org.sg';
+    //   document.getElementById('phone-link').href = 'tel:96857236';
+    //   document.getElementById('phone-button').href = 'tel:96857236';
+    //   document.getElementById('email-button').href = 'mailto:stephen.sing@sra.org.sg';
+    });
+  </script>
+</body>
+</html>
