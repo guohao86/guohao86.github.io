@@ -2,10 +2,10 @@
   "name": "Gary Guo",
   "title": "Executive",
   "email": "gary_biz@outlook.com",
-  "phone": "96857236",
-  "location": "1 Coleman St, Singapore 179803 05-11B",
+  "phone": "8123456",
+  "location": "5 Ang Mo Kio Street 62, NCS Hub, Singapore 569141",
   "countryPhone": "+65",
-  "website": "www.sra.org.sg",
+  "website": "https://www.ncs.co/en-sg/",
   "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8042914990834!2d103.8489513!3d1.291863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a5ede1ef05%3A0x7f19209de442480b!2s1%20Coleman%20St%2C%20Singapore%20179803!5e0!3m2!1sen!2ssg!4v1632555484105!5m2!1sen!2ssg",
   "experience": [
     "NCS Pte Ltd"
@@ -18,28 +18,27 @@
   "socials": [
     {
       "platform": "linkedin",
-      "username": "xysing",
+      "username": "garygary86",
       "icon": "fab fa-linkedin"
     },
     {
       "platform": "whatsapp",
-      "username": "+6596857236",
+      "username": "+658123456",
       "icon": "fab fa-whatsapp"
     },
     {
       "platform": "wechat",
-      "username": "bingbingbiangbiang",
+      "username": "garygary86",
       "icon": "fab fa-weixin"
     },
     {
       "platform": "facebook",
-      "username": "stephensing",
+      "username": "garygary86",
       "icon": "fab fa-facebook"
     }
   ],
   "links": [
-    "SRA Retail Brigade",
-    "APARA"
+    { "name": "NCS", "url": "https://www.ncs.co.sg/" }
   ],
   "vCardName": "gary_guo.vcf"
 }
